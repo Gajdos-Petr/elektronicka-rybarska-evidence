@@ -1,29 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/navBar/NavBar';
+import Footer from './components/Footer';
+import { COLORS } from './styles/colors';
 
 function App() {
   return (
-    <div className='test'>
-      <p>Hello</p>
+    <div className='testovaci' style={ {backgroundColor: COLORS.BACKGROUND_COLOR}}>
+      <NavBar />
+      <Footer />
     </div>
-
- /*   <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-  </div> */ 
-
   );
 }
 
