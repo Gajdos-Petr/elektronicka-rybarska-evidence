@@ -6,18 +6,15 @@ nav{
 
 .navbar-left-section{
     width: 20%;
-    background-color: brown;
 
 }
 
 .navbar-middle-section{
     width: 60%;
-    background-color: aqua;
     display: flex;
    justify-content: center;
 }
 
 .navbar-right-section{
     width: 20%;
-    background-color: brown;
 }
