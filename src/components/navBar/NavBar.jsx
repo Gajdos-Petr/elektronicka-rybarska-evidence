@@ -2,6 +2,8 @@ import React from 'react'
 import Navigation from './Navigation'
 import LoginButton from '../buttons/LoginButton'
 import '../../styles/NavBar.css'
+import { COLORS } from '../../styles/colors';
+
 function NavBar() {
   return (
 <nav>
@@ -11,7 +13,7 @@ function NavBar() {
     <Navigation />
   </div>
   <div className='navbar-right-section'>
-  <LoginButton />
+  <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
   </div>
 
 </nav>

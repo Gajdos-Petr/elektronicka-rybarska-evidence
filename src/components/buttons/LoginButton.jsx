@@ -1,9 +1,10 @@
 import React from 'react'
+import ButtonStyle from '../../styles/button.module.css'
 
-function LoginButton() {
+function LoginButton(props) {
   return (
     <div>
-        <button>PŘIHLASIT SE</button>
+        <button className={ButtonStyle.loginButton} style={{ background: props.background }}>PŘIHLASIT SE</button>
     </div>
   )
 }

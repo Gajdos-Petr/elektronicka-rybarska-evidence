@@ -5,7 +5,6 @@ function Footer() {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        position: "absolute",
         bottom: 0,
     }
   return (
