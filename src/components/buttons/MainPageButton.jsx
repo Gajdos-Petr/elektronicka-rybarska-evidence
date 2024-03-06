@@ -4,15 +4,23 @@ function MainPageButton(props) {
     const myButtonStyle = {
         background: props.backgroundColor,
         color: props.color,
-        width: "200px",
-        height: "215px",
-        borderRadius: "10%",
-        fontSize: "40px",
+        maxHeight: "190px",
+        borderRadius: "5%",
+        fontSize: "2rem",
         textTransform: "uppercase",
         display: "flex",
         alignItems: "center",
-        textAlign: "center"
+        justifyContent: 'center',
+        textAlign: "center",
+
+  
     };
+    if (window.innerWidth <= 768) {
+      myButtonStyle.fontSize = '1.4rem';
+    } 
+    if (window.innerWidth <= 768) {
+      myButtonStyle.fontSize = '1.4rem';
+    } 
 
   return (
     <div style={myButtonStyle} className='myButton'>

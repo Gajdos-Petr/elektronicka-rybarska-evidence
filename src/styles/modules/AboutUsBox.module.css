@@ -1,0 +1,15 @@
+.box{
+    background-color: transparent;
+    max-width: 450px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.box img{
+    max-height: 100px;
+}
+.boxTittle{
+    text-transform: uppercase;
+    font-weight: bold;
+}

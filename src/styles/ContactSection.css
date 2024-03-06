@@ -1,0 +1,5 @@
+section.contact{
+    width: 100%;
+    min-height: 70vh;
+    background-color: var(--site-main-background-color);
+}

@@ -1,0 +1,129 @@
+img{
+    display: block;
+    max-width: 100%;
+    max-height: auto;  
+}
+
+.hero{
+   
+    display: flex;
+    justify-content: center;
+    min-height: 95vh;
+    align-items: center;
+    background-color: var(--site-main-background-color);
+}
+
+.two-column-container{
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 10px;
+}
+
+.hero-container.right{
+    display: flex;
+    flex-direction: column;
+}
+.hero-container.left{
+    display: flex;
+    align-items: center;
+}
+.bottom{
+    width: 90%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+
+}
+.inner-container .myButton:nth-child(even) {
+    margin-inline: 20px;
+  }
+.hero-tittle{
+    font-size: var(--hero-tittle-font-size); 
+}
+.bottom{
+    display: flex;
+
+}
+.hero-buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    
+}
+.button-link.first, .button-link.thirth{
+    background-color: blue;
+}
+.button-link.second{
+    background-color: blueviolet;
+}
+
+
+
+
+
+
+ /*RESPONZIVITA */
+
+ /*Mensi nez 1024 (tablety, male ntb)*/
+ @media screen and (max-width: 1024px) {
+    .hero{
+        padding-top: 10%;
+        align-items: center;
+        text-align: center;
+    }
+    .two-column-container {
+        grid-template-columns: 1fr; /* Jeden sloupec pro menší obrazovky */
+    }
+    .hero-container.left{
+        min-height: 50vh;
+    }
+    .hero-container.right{
+        align-items: center;
+        padding-top: 2rem;
+
+    }
+    .bottom{
+        padding-top: 5rem;
+        justify-content: center;
+     padding-bottom: 4rem;
+
+
+    }
+    .myButton{
+        min-height: 250px;
+    }
+}
+
+ /*Mensi nez 1024 (telefony)*/
+@media screen and (max-width: 768px) {
+
+    .inner-container .myButton:nth-child(even) {
+        margin-inline: 0px;
+      }
+      .hero{
+
+      }
+    .bottom{
+    padding-top: 10%;
+   flex-direction: column;
+   align-items: center;
+   grid-template-columns: 1fr;
+   width: 80%;
+   gap: 30px;
+}
+ .bottom{
+    justify-content: center;
+
+}
+.hero-buttons {
+    width: 90%;
+    grid-template-columns: 1fr; /* Jeden sloupec pro menší obrazovky */
+}
+
+
+
+}

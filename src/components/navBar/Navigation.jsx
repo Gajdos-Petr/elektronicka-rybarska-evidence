@@ -6,9 +6,9 @@ function Navigation() {
   return (
     <div className='menu'>
       <ul>
-        <li>HOME</li>
-        <li>ABOUT US</li>
-        <li>CONTANT</li>
+        <li>DOMŮ</li>
+        <li>O NÁS</li>
+        <li>KONTAKT</li>
       </ul>
     </div>
   )

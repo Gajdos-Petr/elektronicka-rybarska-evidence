@@ -1,8 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--site-font-family);
 }
 
 
+:root {
+ /*========== COLORS==========*/
+--site-main-background-color: #FEFFFF;
+--site-second-background-color: #f7f7f7;
+--text-color-black: #000000;
+--text-color-white: #FFFFFF;
+--section-color: #BFEA7C;
+--box-color-dark: #17252A;
+--box-color-light: #3AAFA9;
+
+
+
+  /*========== Responsive typography - Basic==========*/
+  --site-font-family: "Oswald", sans-serif;
+  --hero-tittle-font-size: 5.25rem;
+  --p-content-fonz-size: 1em;
+  --section-tittle-font-size: 1.5rem;
+  --link-box-fonz-size: 2.25rem;
+
+}
+
+
+/*========== Responsive typography - Tablets ==========*/
+@media screen and (max-width: 1150px) {
+  :root {
+    --hero-tittle-font-size: 4.25rem;
+    --p-content-fonz-size: 1.5em;
+    --section-tittle-font-size: 1.5rem;
+    --link-box-fonz-size: 2rem;
+
+  }
+}
+/*========== Responsive typography - Mobile==========*/
+@media screen and ( max-width: 768px) {
+  :root {
+    --hero-tittle-font-size: 2.25rem;
+    --p-content-fonz-size: 1.5em;
+    --section-tittle-font-size: 1.5rem;
+    --link-box-fonz-size: 2rem;
+
+  }
+}
