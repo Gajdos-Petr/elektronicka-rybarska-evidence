@@ -18,6 +18,8 @@ section.aboutUs{
   text-align: center ;
   gap: 3rem;
   margin-inline: 3rem;
+  padding-bottom: 4rem;
+
 }
 .about-tittle{
   font-size: var(--link-box-fonz-size);
@@ -44,7 +46,6 @@ section.aboutUs{
 @media screen and (max-width: 768px) {
   .about-us-conatiner{
     margin-inline: 4rem;
-    padding-bottom: 4rem;
 
   }
   .inner-container-boxes{

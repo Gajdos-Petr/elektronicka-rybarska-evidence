@@ -9,9 +9,10 @@ function Footer() {
         color: "white",
         bottom: 0,
     }
+    const currentYear = new Date().getFullYear();
   return (
   <footer style={footerStyle}>
-    <p>© 2024 RYBARSKY ELEKTRONICKY SYSTEM</p>
+    <p>© {currentYear} RYBARSKY ELEKTRONICKY SYSTEM</p>
   </footer>
   )
 }
