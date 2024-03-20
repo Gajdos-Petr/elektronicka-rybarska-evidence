@@ -4,9 +4,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--site-font-family);
+  
 }
+html{
+  scroll-behavior: smooth;
 
-
+}
+a {
+  text-decoration: none;
+}
 :root {
  /*========== COLORS==========*/
 --site-main-background-color: #FEFFFF;

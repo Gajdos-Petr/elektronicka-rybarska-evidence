@@ -14,4 +14,5 @@ section.contact{
     flex-direction: row;
     gap: 10rem;
     justify-content: center;
+    padding: 3rem 0  3rem 0;
 }

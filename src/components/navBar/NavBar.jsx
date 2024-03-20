@@ -13,7 +13,7 @@ function NavBar() {
     <Navigation />
   </div>
   <div className='navbar-right-section'>
-  <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
+ <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
   </div>
 
 </nav>

@@ -8,7 +8,7 @@ import { COLORS } from '../../styles/colors'
 
 function AboutUsSection() {
   return (
-    <section className='aboutUs'>
+    <section className='aboutUs' id='aboutUs'>
       <SectionTittle tittle={"O nás"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
         <div className='about-us-conatiner'>
         <div className='about-tittle'>Poskytujeme rybářům jednoduchou a hlavně spolehlivou evidenci jejich rybářských výprav.</div>
