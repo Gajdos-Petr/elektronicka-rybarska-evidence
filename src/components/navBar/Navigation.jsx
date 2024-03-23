@@ -1,7 +1,11 @@
 import React from 'react';
 import '../../styles/Navigation.css';
 import { Link } from "react-router-dom";
+
+
 function Navigation() {
+
+  
   return (
     <div className='menu'>
       <ul>
@@ -15,7 +19,6 @@ function Navigation() {
         <li>
         <a href='#contact'>Kontakt</a>
         </li>
-
       </ul>
     </div>
   )

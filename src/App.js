@@ -11,6 +11,7 @@ function App() {
   return (
     <div className='testovaci' style={ {backgroundColor: COLORS.BACKGROUND_COLOR}}>
         <NavBar />
+        
         <Routes>
          <Route path='/' element={<Home/>} />
          <Route path='/about' element={<AboutUsSection/>} />
