@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 function MainPageButton(props) {
     const myButtonStyle = {
@@ -23,9 +25,12 @@ function MainPageButton(props) {
     } 
 
   return (
-    <div style={myButtonStyle} className='myButton'>
+    <Link to={props.url}>
+       <div style={myButtonStyle} className='myButton'>
         <p>{props.text}</p>
-    </div>
+       </div>
+    </Link>
+
   )
 }
 

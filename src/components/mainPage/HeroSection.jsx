@@ -3,7 +3,6 @@ import MainPageButton from '../buttons/MainPageButton'
 import { COLORS } from '../../styles/colors';
 import BackgroundImage from '../../images/32440116_7958650.jpg';
 import '../../styles/HeroSection.css'
-import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -21,11 +20,9 @@ function HeroSection() {
       </div>
       <div className="bottom">
             <div className="hero-buttons">
-            <Link to="/Login">
-            <MainPageButton text={["seznam", <br></br>,  "revírů"]}  backgroundColor={COLORS.BOX_COLOR_DARK}  color={COLORS.TEXT_COLOR_WHITE}/>
-            </Link>
-            <MainPageButton text={["členská", <br></br>,  "docházka"]} backgroundColor={COLORS.BOX_COLOR_LIGHT} color={COLORS.TEXT_COLOR_WHITE}/>
-            <MainPageButton text={["rybářský", <br></br>,  "řád"]} backgroundColor={COLORS.BOX_COLOR_DARK} color={COLORS.TEXT_COLOR_WHITE}/>
+            <MainPageButton text={["seznam", <br></br>,  "revírů"]}  backgroundColor={COLORS.BOX_COLOR_DARK}  color={COLORS.TEXT_COLOR_WHITE} url={"/Grounds"}/>
+            <MainPageButton text={["členská", <br></br>,  "docházka"]} backgroundColor={COLORS.BOX_COLOR_LIGHT} color={COLORS.TEXT_COLOR_WHITE} url={"/Login"}/>
+            <MainPageButton text={["rybářský", <br></br>,  "řád"]} backgroundColor={COLORS.BOX_COLOR_DARK} color={COLORS.TEXT_COLOR_WHITE} url={"/Login"}/>
    
             </div>
         </div>
