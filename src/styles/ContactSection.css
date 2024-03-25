@@ -9,13 +9,44 @@ section.contact{
 }
 .contact-tittle{
     text-transform: uppercase;
+    font-size: var(--link-box-fonz-size);;
+    text-align: center;
 }
 
 .contact-conatiner{
     max-width: 1100px;
     display: flex;
-    flex-direction: row;
-    gap: 10rem;
+    flex-direction: column;
+    gap: 3rem;
     justify-content: center;
     padding: 3rem 0  3rem 0;
+    align-items: center;
 }
+.contact-boxes{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem ;
+}
+ /*RESPONZIVITA */
+
+ /*Mensi nez 1024 (tablety, male ntb)*/
+ @media screen and (max-width: 1024px) {
+ 
+ }
+ 
+ /*Mensi nez 1024 (telefony)*/
+ @media screen and (max-width: 768px) {
+   .contact-conatiner{
+     margin-inline: 4rem;
+ 
+   }
+   .contact-conatiner{
+     flex-direction: column;
+   }
+   .contact-boxes{
+    gap: 3rem;
+    flex-direction: column;
+
+   }
+ 
+ }

@@ -1,17 +1,20 @@
 import React from 'react'
-import AboutUsBoxStyle from '../../styles/modules/AboutUsBox.module.css'
-import { Phone } from 'lucide-react';
+import IconCardStyle from '../../styles/modules/IconCard.module.css'
 
-function IconCard(props) {
+function IconCard({icon, other, contextAlign }) {
+  const IconComponent = icon.iconComponent;
+  const boxStyle = {
+    alignItems: contextAlign || 'left'
+  };
   return (
-    <div className={AboutUsBoxStyle.box}>
-        <div className={AboutUsBoxStyle.boxIcon}>
-          <div className={AboutUsBoxStyle.iconImage}>
-        <Phone />
+    <div className={IconCardStyle.box} style={boxStyle}>
+        <div className={IconCardStyle.boxIcon}>
+          <div className={IconCardStyle.iconImage}>
+          <IconComponent size={icon.size} />
           </div>
         </div>
-        <div className={AboutUsBoxStyle.boxTittle}>{props.tittle}</div>
-        {props.text ?   <div className={AboutUsBoxStyle.boxText}>{props.text}</div> : null}
+        <div className={IconCardStyle.boxTittle}>{other.tittle}</div>
+        {other.text ?   <div className={IconCardStyle.boxText}>{other.text}</div> : null}
     </div>
   )
 }

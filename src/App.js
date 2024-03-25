@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import AboutUsSection from './components/mainPage/AboutUsSection';
 import ContactSection from './components/mainPage/ContactSection';
 import ListOfGrounds from './pages/ListOfGrounds'
+import Page404 from './pages/Page404'
 import Login from './pages/Login'
 import { COLORS } from './styles/colors';
 import { Route, Routes } from 'react-router-dom';
@@ -19,6 +20,7 @@ function App() {
          <Route path='/contact' element={<ContactSection/>} />
          <Route path='/login' element={<Login/>} />
          <Route path='/Grounds' element={<ListOfGrounds/>} />
+         <Route path="*" element={<Page404 />} />
 
        </Routes>
 

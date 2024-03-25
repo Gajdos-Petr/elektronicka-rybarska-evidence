@@ -1,23 +1,31 @@
-nav{
+nav {
     width: 100%;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid rgb(224, 224, 224);
-}
-
-.navbar-left-section{
-    width: 20%;
-
-}
-
-.navbar-middle-section{
-    width: 60%;
-    display: flex;
-   justify-content: center;
-}
-
-.navbar-right-section{
-    width: 20%;
-    display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-middle-section {
+
+  }
+  
+  .navbar-right-section {
+  }
+  
+
+ /*RESPONZIVITA */
+
+ /*Mensi nez 1024 (tablety, male ntb)*/
+ @media screen and (max-width: 1024px) {
+nav{
+    flex-direction: column;
+}
+}
+
+ /*Mensi nez 1024 (telefony)*/
+@media screen and (max-width: 768px) {
+
+
+
 }
