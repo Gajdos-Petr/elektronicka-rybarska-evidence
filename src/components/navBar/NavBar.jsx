@@ -7,12 +7,14 @@ import { useState } from 'react'
 import {Menu, X} from 'lucide-react'
 
 function NavBar() {
-  const [click, setClick] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
   const [button, setButton] = useState(false);
   
-  const handleClick = () =>setClick(!click);
+  const handleToggleMenu  = () =>setShowMenu(!showMenu);
+
   const showButton = () =>{
-    if(window.innerWidth <= 960){
+    if(window.innerWidth <= 768){
       setButton(true);
     }else{
       setButton(false);
@@ -24,12 +26,15 @@ function NavBar() {
 <nav>
 
   <div className='navbar-middle-section'>
-    <Navigation />
-    {button && <button onClick={handleClick}>{click ? <X/> : <Menu/>}</button>}
 
+    {button && <button onClick={handleToggleMenu}>{showMenu ? <X/> : <Menu/>}</button>}
+    <div className={`nav-elements  ${showMenu && 'active'}`}>
+    <Navigation/>
+    <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
+
+        </div>
   </div>
   <div className='navbar-right-section'>
- <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
   </div>
 
 </nav>
