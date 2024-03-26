@@ -6,7 +6,7 @@ import '../../styles/HeroSection.css'
 
 function HeroSection() {
   return (
- <main>
+ <main id='home'>
  <div className="hero">
   <div className="two-column-container">
   <div className='hero-container left' >

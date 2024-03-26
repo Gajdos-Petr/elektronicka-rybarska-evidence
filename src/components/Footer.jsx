@@ -5,7 +5,7 @@ function Footer() {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "var(--box-color-light)",
+        backgroundColor: "var(--box-color-dark)",
         color: "white",
         bottom: 0,
     }

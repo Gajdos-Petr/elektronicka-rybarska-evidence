@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './components/navBar/NavBar';
+import Header from './components/navBar/Header';
 import Home from './pages/Home';
 import AboutUsSection from './components/mainPage/AboutUsSection';
 import ContactSection from './components/mainPage/ContactSection';
@@ -12,7 +12,7 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className='testovaci' style={ {backgroundColor: COLORS.BACKGROUND_COLOR}}>
-        <NavBar />
+        <Header />
         
         <Routes>
          <Route path='/' element={<Home/>} />

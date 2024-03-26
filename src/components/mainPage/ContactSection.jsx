@@ -16,6 +16,7 @@ function ContactSection() {
    <div className="contact-boxes">
    <IconCard
           icon={{
+            color: COLORS.BOX_COLOR_LIGHT,
             iconComponent: MapPin,
             size: iconSize
           }}
@@ -24,9 +25,11 @@ function ContactSection() {
            text: "nám. Čs. legií 565, 530 02 Pardubice I"
           }}
           contextAlign="center"
+          boxDirection="row"
     /> 
     <IconCard
           icon={{
+            color: COLORS.BOX_COLOR_LIGHT,
             iconComponent: Phone,
             size: iconSize
           }}
@@ -35,9 +38,11 @@ function ContactSection() {
            text: "778 457 274"
           }}
           contextAlign="center"
+          boxDirection="row"
     />       
     <IconCard
           icon={{
+            color: COLORS.BOX_COLOR_LIGHT,
             iconComponent: Mail,
             size: iconSize
           }}
@@ -46,6 +51,7 @@ function ContactSection() {
            text: "st64119@upce.cz"
           }}
           contextAlign="center"
+          boxDirection="row"
           />  
 
    </div>

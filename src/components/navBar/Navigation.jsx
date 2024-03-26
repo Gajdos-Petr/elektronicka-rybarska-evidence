@@ -3,21 +3,21 @@ import '../../styles/Navigation.css';
 import { Link } from "react-router-dom";
 
 
-function Navigation() {
+function Navigation({ closeMenu }) {
 
   
   return (
     <div className='menu'>
       <ul>
         <li>
-        <Link to="/">Domů</Link>
+        <Link to="/" onClick={closeMenu}>Domů</Link>
         </li>
         <li>
         {/*<Link to="/about">O nás</Link>*/}
-        <a href='#aboutUs'>O nás</a>
+        <a href='#aboutUs' onClick={closeMenu}>O nás</a>
         </li>
         <li>
-        <a href='#contact'>Kontakt</a>
+        <a href='#contact' onClick={closeMenu}>Kontakt</a>
         </li>
       </ul>
     </div>

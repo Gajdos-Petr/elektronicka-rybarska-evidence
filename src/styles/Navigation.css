@@ -1,13 +1,17 @@
 .menu{
-    display: flex;
+     display: flex;
+
 }
 
 .menu ul {
     display: flex;
     list-style: none;
+    
   }
 .menu li{
  text-transform: uppercase;
+ margin: 0px 30px;
+
 
 }
 

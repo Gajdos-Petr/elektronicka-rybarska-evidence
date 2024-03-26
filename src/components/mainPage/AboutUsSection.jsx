@@ -3,7 +3,7 @@ import '../../styles/AboutUsSection.css'
 import SectionTittle from '../SectionTittle'
 import IconCard from './IconCard'
 
-import { Phone } from 'lucide-react';
+import {  Layers, Rabbit } from 'lucide-react';
 
 import { COLORS } from '../../styles/colors'
 
@@ -18,8 +18,9 @@ function AboutUsSection() {
           <div className='inner-left'>
           <IconCard
           icon={{
-            iconComponent: Phone,
-            size: 64
+            iconComponent: Layers,
+            size: 64,
+            color: COLORS.BOX_COLOR_LIGHT
           }}
           other={{
            tittle: "Vše na jednom místě",
@@ -30,8 +31,9 @@ function AboutUsSection() {
           <div className='inner-right'>
           <IconCard
           icon={{
-            iconComponent: Phone,
-            size: 64
+            iconComponent: Rabbit,
+            size: 64,
+            color: COLORS.BOX_COLOR_LIGHT
           }}
           other={{
            tittle: "Velká přehlednost",

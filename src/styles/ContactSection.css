@@ -8,7 +8,6 @@ section.contact{
 
 }
 .contact-tittle{
-    text-transform: uppercase;
     font-size: var(--link-box-fonz-size);;
     text-align: center;
 }
@@ -17,7 +16,7 @@ section.contact{
     max-width: 1100px;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 6rem;
     justify-content: center;
     padding: 3rem 0  3rem 0;
     align-items: center;

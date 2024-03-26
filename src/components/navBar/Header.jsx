@@ -1,12 +1,12 @@
 import React from 'react'
 import Navigation from './Navigation'
 import LoginButton from '../buttons/LoginButton'
-import '../../styles/NavBar.css'
+import '../../styles/Header.css'
 import { COLORS } from '../../styles/colors'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Menu, X} from 'lucide-react'
 
-function NavBar() {
+function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   const [button, setButton] = useState(false);
@@ -21,24 +21,20 @@ function NavBar() {
     }
   } ;
   window.addEventListener('resize', showButton);
-  
+  useEffect(() => {
+    showButton();
+  });
   return (
-<nav>
+<header>
 
-  <div className='navbar-middle-section'>
-
-    {button && <button onClick={handleToggleMenu}>{showMenu ? <X/> : <Menu/>}</button>}
-    <div className={`nav-elements  ${showMenu && 'active'}`}>
-    <Navigation/>
+<div className={`navbar  ${showMenu && 'active'}`}>
+    <Navigation closeMenu={handleToggleMenu}/>
     <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
-
-        </div>
   </div>
-  <div className='navbar-right-section'>
-  </div>
-
-</nav>
+  {button && <button className='hamburger' onClick={handleToggleMenu}>{showMenu ? <X size={32}/> : <Menu size={32}/>}</button>}
+ 
+</header>
     )
 }
 
-export default NavBar
+export default Header
