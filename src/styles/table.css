@@ -67,7 +67,9 @@ color: white;
   @media screen and ( max-width: 768px) {
     
   
-   
+    .table-head{
+      flex-direction: column;
+    }
     
     table thead {
       overflow: hidden;

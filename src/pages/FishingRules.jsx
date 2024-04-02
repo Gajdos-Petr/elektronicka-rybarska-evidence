@@ -13,7 +13,6 @@ function FishingRules() {
         alignItems: "center",
         justifyContent: "center",
         paddingBottom: "4rem",
-        paddingTop: "3rem",
 
 
     }
@@ -32,7 +31,7 @@ function FishingRules() {
           {data.map((item, index) => (
             <>
               {item.section && (
-                <h1>{item.section}</h1>
+                <h1 style={{paddingTop: 100}}>{item.section}</h1>
               )}
               <Accordion key={index}>
                 <AccordionSummary
