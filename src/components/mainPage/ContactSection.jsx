@@ -11,7 +11,7 @@ function ContactSection() {
   return (
     <section className='contact' id='contact'>
     <SectionTittle tittle={"Kontakt"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
-    <div className="contact-conatiner">
+    <div className="container-section contact-conatiner">
     <div className='contact-tittle'>V případě nutnosti nás neváhejte kontaktovat!</div>
    <div className="contact-boxes">
    <IconCard

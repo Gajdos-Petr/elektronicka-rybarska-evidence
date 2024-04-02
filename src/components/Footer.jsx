@@ -7,7 +7,7 @@ function Footer() {
         justifyContent: "center",
         backgroundColor: "var(--box-color-dark)",
         color: "white",
-        bottom: 0,
+        marginTop: "auto"
     }
     const currentYear = new Date().getFullYear();
   return (

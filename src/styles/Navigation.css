@@ -10,9 +10,14 @@
 .menu li{
  text-transform: uppercase;
  margin: 0px 30px;
-
-
+ font-size: var(--menu-li-font-size);
 }
+.menu li a:hover{
+ color: var(--box-color-light);
+ }
+.menu li a{
+color: black;
+ }
 
 @media (max-width: 768px) {
  

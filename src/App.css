@@ -1,4 +1,4 @@
-.testovaci{
-  min-height: 100vh;
-
+.container-section{
+  width: clamp(100px, 80% ,1250px);
+  margin-inline: 3rem;
 }

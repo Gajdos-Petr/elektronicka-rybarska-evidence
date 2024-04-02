@@ -1,0 +1,65 @@
+.table-wrapper{
+  background-color: var(--table-background-color);
+  display: flex;
+  justify-content: center;
+  min-height: auto;
+  padding-top: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.table-head{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+
+.table-head input, select{
+  font-family: var(--site-font-family);
+  border: none;
+  font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    border-collapse:separate;
+    border-spacing:0 15px;
+  }
+  
+  table td, table th {
+    padding: 8px;
+ 
+  }
+  
+  .table-row{
+    border-radius: 20%;
+  
+  }
+
+
+  tbody, thead{
+    background-color: var(--site-main-background-color);
+    color: black;
+  }
+
+  tbody{
+    cursor: pointer;
+
+  }
+ tbody tr:hover{
+  background-color: var(--box-color-light);
+color: white;
+ }
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: start;
+
+  }
+

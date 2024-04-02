@@ -1,0 +1,36 @@
+.infoBox{
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-Color: var(--site-second-background-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+}
+
+/*========== Responsive typography - Mobile==========*/
+@media screen and ( max-width: 768px) {
+    .infoBox {
+        flex-direction: column;
+
+    }
+  }
+
+
+.infoBoxItem {
+    text-align: center;
+}
+
+.infoBoxItemTittle{
+color: black;
+text-transform: uppercase;
+
+}
+
+.infoBoxItemText{
+    color: var(--box-color-light);
+    font-size: var(--ground-info-tittle-text);
+    text-transform: uppercase;
+}
+
+

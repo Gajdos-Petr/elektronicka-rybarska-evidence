@@ -11,7 +11,7 @@ function AboutUsSection() {
   return (
     <section className='aboutUs' id='aboutUs'>
       <SectionTittle tittle={"O nás"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
-        <div className='about-us-conatiner'>
+        <div className='container-section about-us-conatiner'>
         <div className='about-tittle'>Poskytujeme rybářům jednoduchou a hlavně spolehlivou evidenci jejich rybářských výprav.</div>
         <div className='about-first-text'>Etiam egestas wisi a erat. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Suspendisse nisl. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Mauris tincidunt sem sed arcu. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus et lorem id felis nonummy placerat. Pellentesque pretium lectus id turpis. </div>
         <div className='inner-container-boxes'>

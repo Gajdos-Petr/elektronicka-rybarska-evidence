@@ -29,7 +29,7 @@ function Header() {
 
 <div className={`navbar  ${showMenu && 'active'}`}>
     <Navigation closeMenu={handleToggleMenu}/>
-    <LoginButton background={COLORS.BOX_COLOR_LIGHT} />
+    <LoginButton background={COLORS.BOX_COLOR_LIGHT} url={"/Login"} content={"PŘIHLÁSIT SE"}/>
   </div>
   {button && <button className='hamburger' onClick={handleToggleMenu}>{showMenu ? <X size={32}/> : <Menu size={32}/>}</button>}
  

@@ -20,9 +20,9 @@ function HeroSection() {
       </div>
       <div className="bottom">
             <div className="hero-buttons">
-            <MainPageButton text={["seznam", <br></br>,  "revírů"]}  backgroundColor={COLORS.BOX_COLOR_DARK}  color={COLORS.TEXT_COLOR_WHITE} url={"/Grounds"}/>
+            <MainPageButton text={["seznam", <br></br>,  "revírů"]}  backgroundColor={COLORS.BOX_COLOR_DARK}  color={COLORS.TEXT_COLOR_WHITE} url={"/seznam-reviru"}/>
             <MainPageButton text={["členská", <br></br>,  "docházka"]} backgroundColor={COLORS.BOX_COLOR_LIGHT} color={COLORS.TEXT_COLOR_WHITE} url={"/Login"}/>
-            <MainPageButton text={["rybářský", <br></br>,  "řád"]} backgroundColor={COLORS.BOX_COLOR_DARK} color={COLORS.TEXT_COLOR_WHITE} url={"/Login"}/>
+            <MainPageButton text={["rybářský", <br></br>,  "řád"]} backgroundColor={COLORS.BOX_COLOR_DARK} color={COLORS.TEXT_COLOR_WHITE} url={"/rybarsky-rad"}/>
    
             </div>
         </div>

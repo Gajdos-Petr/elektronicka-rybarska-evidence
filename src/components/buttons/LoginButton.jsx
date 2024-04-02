@@ -1,11 +1,13 @@
 import React from 'react'
 import ButtonStyle from '../../styles/button.module.css'
+import { Link } from "react-router-dom";
 
 function LoginButton(props) {
   return (
-    <div>
-        <button className={ButtonStyle.loginButton} style={{ background: props.background }}>PŘIHLASIT SE</button>
-    </div>
+    <Link to={props.url}>
+        <button className={ButtonStyle.loginButton} style={{ background: props.background }}>{props.content}</button>
+    </Link>
+
   )
 }
 
