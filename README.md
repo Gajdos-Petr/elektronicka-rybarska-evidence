@@ -1,5 +1,5 @@
 # Spuštění projektu
-Po clonu projektu do Visual Studio Code je nutné spustit v terminálu příkad **npm install**.
+Po clonu projektu do Visual Studio Code je nutné spustit v terminálu příkaz **npm install**.
 Poté **npm start**.
 
 
