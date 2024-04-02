@@ -8,6 +8,7 @@ function BasicTable() {
 
     const [filterInput, setFilterInput] = useState("");
 
+
     const handleFilterChange = e => {
         const value = e.target.value || undefined;
         setFilter("number", value); 
@@ -28,7 +29,8 @@ function BasicTable() {
       };
 
 
-    const navigate = useNavigate();
+
+  const navigate = useNavigate();
   const goRouteId = (number) => {
    navigate(`/revir/${number}`);
   }   
@@ -108,7 +110,7 @@ function BasicTable() {
                         <tr onClick={()=> goRouteId(row.original.number)} className='table-row' {...row.getRowProps()}>
                             {
                                 row.cells.map(cell => {
-                                   return <td {...cell.getCellProps()}>{cell.value === null ? '-' : cell.render('Cell')}</td>
+                                   return <td {...cell.getCellProps()} data-label={cell.column.Header}>{cell.value === null ? '-' : cell.render('Cell')}</td>
     
                                 })
                             }

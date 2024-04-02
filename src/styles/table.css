@@ -63,3 +63,32 @@ color: white;
 
   }
 
+
+  @media screen and ( max-width: 768px) {
+    
+  
+   
+    
+    table thead {
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+    }
+    
+ 
+    
+    table td {
+      border-bottom: 1px solid var(--table-background-color);
+      display: block;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+    }
+    
+  
+  }
+
