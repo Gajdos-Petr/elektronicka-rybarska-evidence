@@ -53,6 +53,7 @@ nav{
     justify-content: center;
     padding: 0;
       gap: 1rem;
+      z-index: 1;
     }
   
     .navbar ul {

@@ -21,7 +21,7 @@ function Navigation({ closeMenu }) {
         )}
         {!isHome && (
           <li>
-            <Link to="/Login" onClick={closeMenu}>Řád</Link>
+            <Link to="/rybarsky-rad" onClick={closeMenu}>Řád</Link>
           </li>
         )}
         {!isHome && (
