@@ -1,3 +1,11 @@
+# Spuštění projektu
+Po clonu projektu do Visual Studio Code je nutné spustit v terminálu příkaz **npm install**.
+Poté **npm start**.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
