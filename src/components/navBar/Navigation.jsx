@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Navigation.css';
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 
 function Navigation({ closeMenu }) {
@@ -31,10 +32,10 @@ function Navigation({ closeMenu }) {
         )}
         <li>
         {/*<Link to="/about">O nás</Link>*/}
-        <a href='/#aboutUs' onClick={closeMenu}>O nás</a>
+        <HashLink to='/#aboutUs' onClick={closeMenu}>O nás</HashLink>
         </li>
         <li>
-        <a href='/#contact' onClick={closeMenu}>Kontakt</a>
+        <HashLink to='/#contact' onClick={closeMenu}>Kontakt</HashLink>
         </li>
 
       </ul>

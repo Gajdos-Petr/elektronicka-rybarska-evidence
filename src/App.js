@@ -26,7 +26,7 @@ function App() {
         <Routes>
          <Route path='/'   element={<Home/>} />
          <Route path='/about' element={<AboutUsSection/>} />
-         <Route path='/contact' element={<ContactSection/>} />
+         <Route path='/#contact' element={<ContactSection/>} />
          <Route path='/login' element={<Login/>} />
          <Route path='/seznam-reviru'  element={<ListOfGrounds/>} />
          <Route path='/rybarsky-rad'  element={<FishingRules/>} />
