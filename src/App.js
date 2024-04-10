@@ -24,20 +24,16 @@ function App() {
         <Header />
         
         <Routes>
-         <Route path='/'   element={<Home/>} />
-         <Route path='/about' element={<AboutUsSection/>} />
-         <Route path='/#contact' element={<ContactSection/>} />
-         <Route path='/login' element={<Login/>} />
-         <Route path='/seznam-reviru'  element={<ListOfGrounds/>} />
-         <Route path='/rybarsky-rad'  element={<FishingRules/>} />
-
-         <Route path='/revir/:number' element={<GroundInfo/>} />
-
-         <Route path='/dashboard' element={<MemberDashboard/>} />
-
-         <Route path="*" element={<Page404 />} />
+         <Route path='/'   element={<Home/>} /> {/*Domovská stránka*/}
+         <Route path='/login' element={<Login/>} /> {/*Cesta na: Přihlášení*/}
+         <Route path='/seznam-reviru'  element={<ListOfGrounds/>} /> {/*Cesta na: Stránka seznam revírů*/}
+         <Route path='/rybarsky-rad'  element={<FishingRules/>} /> {/*Cesta na: Stránka rybářský řád*/}
+         <Route path='/revir/:number' element={<GroundInfo/>} /> {/*Dynamicka cesta: pro informace o konkrétním revíru*/}
+         <Route path='/dashboard' element={<MemberDashboard/>} /> {/*Cesta na: stránka přehled uživatele*/}
+         <Route path="*" element={<Page404 />} /> {/*Chybová stránka 404*/}
 
        </Routes>
+
        <Footer />
 
     </>

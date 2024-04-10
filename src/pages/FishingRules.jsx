@@ -4,12 +4,16 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { ArrowBigDown } from 'lucide-react';
 import RAD_DATA from '../sources/rad.json'
+import SectionTittle from '../components/SectionTittle'
+import { COLORS } from '../styles/colors';
 
 function FishingRules() {
     const sectionLawStyle = {
         width: "100%",
         minHeight: "70vh",
         display: "flex",
+        flexDirection: "column",
+        paddingTop: "2rem",
         alignItems: "center",
         justifyContent: "center",
         paddingBottom: "4rem",
@@ -27,6 +31,8 @@ function FishingRules() {
       };
     return (
         <section style={sectionLawStyle}>
+   <SectionTittle tittle={"Rybářský řád"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
+
         <div className='container-section'>
           {data.map((item, index) => (
             <>
