@@ -1,14 +1,12 @@
-import React,{useState, useEffect, useMemo}  from 'react';
-import { useTable, useFilters } from 'react-table';
+import React,{useState, useMemo}  from 'react';
+import { useTable, useFilters, usePagination } from 'react-table';
 import { useNavigate  } from "react-router-dom";
-import REVIRY_DATA from '../sources/reviry.json'
-import '../styles/table.css'
-function BasicTable() {
- /*  { const [data, setData] = useState([]);}*/
+import '../../styles/table.css'
+function GroundsTable({columns, inputData}) {
 
     const [filterInput, setFilterInput] = useState("");
 
-
+    //filtrovani reviru podle podle cisla reviru 
     const handleFilterChange = e => {
         const value = e.target.value || undefined;
         setFilter("number", value); 
@@ -16,65 +14,42 @@ function BasicTable() {
       };
       
 
+      //filtrovani reviru podle typu (Pstruhovy / Mimopstruhovy) 
       const handleTypeFilter = e => {
         const value = e.target.value || undefined;
-        console.log(value);
         if(value === 'all'){
-          console.log("i am all");
           setFilter("type", undefined); 
         }else{
-          console.log("i am type");
         setFilter("type", value); 
         }
       };
 
 
-
+//presmerovani na prislusnou stranku s informacemi o konkretnim reviru
   const navigate = useNavigate();
   const goRouteId = (number) => {
    navigate(`/revir/${number}`);
   }   
 
-  const data = useMemo(() => REVIRY_DATA, []);
-    const columns = React.useMemo(
-      () => [
-        {
-            Header: "Číslo",
-            accessor: "number",
-          },
-          {
-            Header: "Název",
-            accessor: "name",
-          },
-          {
-            Header: "Typ",
-            accessor: "type",
-          },
-          {
-            Header: "Organizace",
-            accessor: "organization",
-          },
-          
-          {
-            Header: "Velikost",
-            accessor: "size",
-          }
+  const data = useMemo(() => inputData, []);
 
-      ],
-      []
-    );
   
     const {
       getTableProps,
       getTableBodyProps,
       headerGroups,
-      rows,
+      page,
+      nextPage,
+      previousPage,
+      canNextPage,
+      canPreviousPage,
+      pageOptions,
+      state,
       setFilter,
       prepareRow,
-    } = useTable({ columns, data },
-        useFilters 
-        );
+    } = useTable({ columns, data }, useFilters, usePagination);
   
+        const {pageIndex} = state;
     return (
   <div className="table-wrapper">
 <div className="table-head">
@@ -103,7 +78,7 @@ function BasicTable() {
         </thead>
         <tbody {...getTableBodyProps()}>
             {
-                rows.map(row => {
+                page.map(row => {
                     prepareRow(row)
                  
                     return(
@@ -122,10 +97,18 @@ function BasicTable() {
     
         </tbody>
         </table>
-        <button>Předchozí</button>
-        <button>Následující</button>
+<div className='table-bottom'>
+<span>
+          Strana{' '}
+          <strong>
+            {pageIndex + 1} z {pageOptions.length}
+          </strong>{' '}
+        </span>
+        <button onClick={() => previousPage()} disabled={!canPreviousPage}>{"<"}</button>
+        <button onClick={() => nextPage()} disabled={!canNextPage}>{">"}</button>
+</div>
   </div>
     );
   }
 
-export default BasicTable
+export default GroundsTable

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-
+import FormStyle from '../../styles/modules/Form.module.css'
 function LoginForm() {
+  
 const [userName, setUserName] = useState('');
 const [userPassword, setUserPass] = useState('');
 
@@ -19,7 +20,7 @@ const  handleSubmit = (event) => {
 };
   return (
 <>
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit} style={FormStyle.form}>
 <label>ID člena:</label>
 <input type="text" name="" id="" value={userName} onChange={handleChange}/>
 <label>Heslo:</label>

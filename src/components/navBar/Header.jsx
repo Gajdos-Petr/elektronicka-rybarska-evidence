@@ -1,7 +1,9 @@
 import React from 'react'
 import Navigation from './Navigation'
 import LoginButton from '../buttons/LoginButton'
+
 import '../../styles/Header.css'
+
 import { COLORS } from '../../styles/colors'
 import { useState, useEffect } from 'react'
 import {Menu, X} from 'lucide-react'

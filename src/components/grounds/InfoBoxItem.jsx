@@ -1,4 +1,5 @@
 import React from 'react'
+
 import InfoBoxStyle from '../../styles/modules/InfoBox.module.css'
 function InfoBoxItem(props) {
 
@@ -9,5 +10,5 @@ function InfoBoxItem(props) {
     </div>
     )
 }
-
 export default InfoBoxItem
+

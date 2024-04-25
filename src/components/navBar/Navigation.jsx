@@ -7,7 +7,6 @@ import { HashLink } from 'react-router-hash-link';
 function Navigation({ closeMenu }) {
   const location = useLocation().pathname;
   const isHome = location === '/';
-  console.log(isHome);
   
   return (
     <div className='menu'>

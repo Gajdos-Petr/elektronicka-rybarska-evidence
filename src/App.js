@@ -31,7 +31,6 @@ function App() {
          <Route path='/revir/:number' element={<GroundInfo/>} /> {/*Dynamicka cesta: pro informace o konkrétním revíru*/}
          <Route path='/dashboard' element={<MemberDashboard/>} /> {/*Cesta na: stránka přehled uživatele*/}
          <Route path="*" element={<Page404 />} /> {/*Chybová stránka 404*/}
-
        </Routes>
 
        <Footer />

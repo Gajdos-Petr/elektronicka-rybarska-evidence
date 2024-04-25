@@ -1,6 +1,8 @@
-import React,{useState, useEffect}  from 'react'
-import BasicTable from '../components/BasicTable'
+import GroundsTable from '../components/table/SimpleTable'
 import SectionTittle from '../components/SectionTittle'
+import REVIRY_DATA from '../sources/reviry.json'
+import  columns  from '../components/columnsGrounds'
+
 import { COLORS } from '../styles/colors';
 
 
@@ -21,7 +23,7 @@ const groundsStyle = {
 
    <div className='container-section' style={{margin: "auto"}}>
 
- <BasicTable/>
+ <GroundsTable columns={columns} inputData={REVIRY_DATA}/>
    </div>
    </section>
   )

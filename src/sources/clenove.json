@@ -1,0 +1,20 @@
+[
+    {
+        "number": 1,
+        "fName": "Petr",
+        "lName": "Gajdoš",
+        "date": "2.4.2001"
+     },
+    {
+        "number": 2,
+        "fName": "Tomáš",
+        "lName": "Gajdoš",
+        "date": "2.3.1996" }
+    ,
+    {
+        "number": 3,
+        "fName": "Karel",
+        "lName": "Gajdoš",
+        "date": "2.3.2147" 
+    }
+]
