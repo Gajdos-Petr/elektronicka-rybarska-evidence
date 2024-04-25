@@ -6,6 +6,7 @@ function GroundsTable({columns, inputData}) {
 
     const [filterInput, setFilterInput] = useState("");
 
+    console.log(inputData)
     //filtrovani reviru podle podle cisla reviru 
     const handleFilterChange = e => {
         const value = e.target.value || undefined;
@@ -31,7 +32,7 @@ function GroundsTable({columns, inputData}) {
    navigate(`/revir/${number}`);
   }   
 
-  const data = useMemo(() => inputData, []);
+  const data = inputData;
 
   
     const {
