@@ -1,10 +1,12 @@
-import React from 'react';
-import '../../styles/Navigation.css';
+import React, {useContext} from 'react';
+import '../../assets/styles/Navigation.css';
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-
+import { UserContext } from '../../App';
 
 function Navigation({ closeMenu }) {
+  const [user, setUser] = useContext(UserContext);
+
   const location = useLocation().pathname;
   const isHome = location === '/';
   
@@ -26,7 +28,7 @@ function Navigation({ closeMenu }) {
         )}
         {!isHome && (
           <li>
-            <Link to="/Login" onClick={closeMenu}>Docházka</Link>
+            {user ? <Link to="/dashboard" onClick={closeMenu}>Docházka</Link> : <Link to="/Login" onClick={closeMenu}>Docházka</Link>}
           </li>
         )}
         <li>

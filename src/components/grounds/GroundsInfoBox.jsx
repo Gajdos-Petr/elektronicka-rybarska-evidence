@@ -1,6 +1,6 @@
 import React from 'react'
 import InfoBoxItem from './InfoBoxItem'
-import InfoBoxStyle from '../../styles/modules/InfoBox.module.css'
+import InfoBoxStyle from '../../assets/styles/modules/InfoBox.module.css'
 
 function GroundsInfoBox({objectToShow}) {
   

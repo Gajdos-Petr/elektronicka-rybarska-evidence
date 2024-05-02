@@ -1,0 +1,22 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    text-align: left;
+}
+
+input, textarea{
+    font-family: var(--site-font-family);
+    border: none;
+    font-size: 1.4rem;
+}
+
+form input{
+    background-color: var(--site-second-background-color);
+    
+} 
+
+select{
+    border: 1px solid black;
+}

@@ -1,15 +1,15 @@
 import React from 'react'
-import { COLORS } from '../../styles/colors'
+import { COLORS } from '../../assets/colors/colors'
 import IconCard from './IconCard'
-import '../../styles/ContactSection.css'
+import '../../assets/styles/ContactSection.css'
 import SectionTittle from '../SectionTittle'
-import '../../styles/ContactSection.css'
+import '../../assets/styles/ContactSection.css'
 import { Phone, MapPin, Mail } from 'lucide-react';
 
 function ContactSection() {
   const iconSize = 52
   return (
-    <section className='contact' id='contact'>
+    <section className='contact' id="contact">
     <SectionTittle tittle={"Kontakt"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
     <div className="container-section contact-conatiner">
     <div className='contact-tittle'>V případě nutnosti nás neváhejte kontaktovat!</div>

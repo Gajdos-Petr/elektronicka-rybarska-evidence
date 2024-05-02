@@ -64,7 +64,9 @@ img{
 
 
 
-
+.login-wrapper{
+    padding-left: 3rem;
+}
 
  /*RESPONZIVITA */
 
@@ -95,6 +97,10 @@ img{
     }
     .myButton{
         min-height: 250px;
+    }
+    .login-wrapper{
+        padding-left: 0rem;
+        padding-bottom: 3rem;
     }
 }
 

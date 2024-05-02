@@ -3,9 +3,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { ArrowBigDown } from 'lucide-react';
-import RAD_DATA from '../sources/rad.json'
+import RAD_DATA from '../data/rad.json'
 import SectionTittle from '../components/SectionTittle'
-import { COLORS } from '../styles/colors';
+import { COLORS } from '../assets/colors/colors';
 
 function FishingRules() {
     const sectionLawStyle = {

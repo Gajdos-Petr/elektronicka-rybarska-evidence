@@ -1,12 +1,15 @@
-import React from 'react'
-import ButtonStyle from '../../styles/button.module.css'
-import { Link } from "react-router-dom";
-
+import React, {useContext} from 'react'
+import ButtonStyle from '../../assets/styles/modules/button.module.css'
+import { UserContext } from '../../App';
 function LoginButton(props) {
+  const [user, setUser] = useContext(UserContext);
+
+  
+
   return (
-    <Link to={props.url}>
-        <button className={ButtonStyle.loginButton} style={{ background: props.background }}>{props.content}</button>
-    </Link>
+        <button className={ButtonStyle.loginButton} style={{ background: props.background}} onClick={props.handleClick}>
+          {props.content}
+        </button>
 
   )
 }

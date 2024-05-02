@@ -1,11 +1,11 @@
 import React from 'react'
-import '../../styles/AboutUsSection.css'
+import '../../assets/styles/AboutUsSection.css'
 import SectionTittle from '../SectionTittle'
 import IconCard from './IconCard'
 
 import {  Layers, Rabbit } from 'lucide-react';
 
-import { COLORS } from '../../styles/colors'
+import { COLORS } from '../../assets/colors/colors'
 
 function AboutUsSection() {
   return (

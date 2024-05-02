@@ -1,6 +1,6 @@
 import React from 'react'
 
-import InfoBoxStyle from '../../styles/modules/InfoBox.module.css'
+import InfoBoxStyle from '../../assets/styles/modules/InfoBox.module.css'
 function InfoBoxItem(props) {
 
   return (

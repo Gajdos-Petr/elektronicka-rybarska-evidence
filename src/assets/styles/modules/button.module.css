@@ -2,6 +2,7 @@
     border-radius:20px; 
     padding: 10px 10px;
     min-height:30px; 
+    max-width: 140px;
     outline: none;
     border: none;
     min-width: 120px;
@@ -9,6 +10,5 @@
     color: white;
     font-family: "Oswald", sans-serif; 
     font-size: 0.9rem;
-
 }
 

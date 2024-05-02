@@ -1,0 +1,70 @@
+section.dashboard-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 86.5vh;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+}
+
+.member-deshboard-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 2rem;
+    margin: auto;
+
+}
+
+.container-action{
+    width: 90%;
+}
+.container-action-header{
+    display: flex;
+    flex-direction: column;
+  
+    gap: 5px;
+}
+
+section.section-forms{
+    width:100%;
+     display:flex;
+    justify-content:center;
+     padding-top:2rem
+}
+
+
+
+
+.container-actions{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+ /*RESPONZIVITA */
+
+ /*Mensi nez 1024 (tablety, male ntb)*/
+ @media screen and (max-width: 1024px) {
+    .member-deshboard-container{
+        flex-direction: column;
+        align-items:center
+    }
+    .container-actions{
+        align-items: center;
+        justify-content: center;
+    }
+ }
+ 
+ /*Mensi nez 1024 (telefony)*/
+ @media screen and (max-width: 768px) {
+
+ 
+   .container-actions{
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+}
+ 
+ }

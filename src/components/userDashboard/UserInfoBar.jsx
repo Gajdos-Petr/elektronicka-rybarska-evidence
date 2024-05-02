@@ -1,24 +1,32 @@
-import React from 'react'
-import '../../styles/UserInfoBar.css'
-function UserInfoBar() {
+import React,{useState, useContext, useEffect} from 'react'
+import '../../assets/styles/UserInfoBar.css'
+import { UserContext } from '../../App';
+function UserInfoBar({user}) {
+
+
+
+
   return (
     <div className='info-bar-container'>
       <div className='info-data'>
       <label htmlFor="number">ID člena</label>
-    <b>441</b>
+    <b>{user.id}</b>
      <label htmlFor="number">Jméno</label>
-     <b>Petr Gajdoš</b>
+     <b>{user.fName + " " + user.lName}</b>
+     <label htmlFor="date">Datum narození</label>
+     <b>{user.date}</b>
      <label htmlFor="number">Adresa</label>
-     <b>Nazaret 1754 Čáslav, 28601 Čáslav</b>
+     <b>{user.adress}</b>
      <label htmlFor="number">Organizace</label>
-     <b>MO Malešov</b>
+     <b>{user.organization}</b>
      <label htmlFor="number">Známka</label>
-    <b>Zaplacena</b>
+    <b>{user.stamp}</b>
      <label htmlFor="number">Brigády</label>
-     <b>Splněny/Uhrazeny</b>
+     <b>{user.jobs}</b>
      <label htmlFor="number">Povolenka</label>
-     <b>Krajská</b>
+     <b>{user.permit}</b>
       </div>
+
     </div>
   )
 }

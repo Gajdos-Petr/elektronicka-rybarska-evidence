@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 
 function MainPageButton(props) {
-    const myButtonStyle = {
+  
+  const myButtonStyle = {
         background: props.backgroundColor,
         color: props.color,
         maxHeight: "190px",

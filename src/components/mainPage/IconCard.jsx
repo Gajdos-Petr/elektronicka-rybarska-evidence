@@ -1,5 +1,5 @@
 import React from 'react'
-import IconCardStyle from '../../styles/modules/IconCard.module.css'
+import IconCardStyle from '../../assets/styles/modules/IconCard.module.css'
 
 function IconCard({icon, other, contextAlign, boxDirection}) {
   const IconComponent = icon.iconComponent;

@@ -1,14 +1,23 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Navigation from './Navigation'
 import LoginButton from '../buttons/LoginButton'
+import { UserContext } from '../../App'
+import { useNavigate } from 'react-router-dom'
+import '../../assets/styles/Header.css'
 
-import '../../styles/Header.css'
-
-import { COLORS } from '../../styles/colors'
+import { COLORS } from '../../assets/colors/colors'
 import { useState, useEffect } from 'react'
 import {Menu, X} from 'lucide-react'
 
 function Header() {
+  const [user, setUser] = useContext(UserContext);
+  const navigate = useNavigate()
+  
+  const signOutUser =() =>{
+    alert("provadim odhlaseni uzivatele");
+    setUser("")
+    navigate("/")
+  }
   const [showMenu, setShowMenu] = useState(false);
 
   const [button, setButton] = useState(false);
@@ -31,7 +40,7 @@ function Header() {
 
 <div className={`navbar  ${showMenu && 'active'}`}>
     <Navigation closeMenu={handleToggleMenu}/>
-    <LoginButton background={COLORS.BOX_COLOR_LIGHT} url={"/Login"} content={"PŘIHLÁSIT SE"}/>
+    {user && <LoginButton background={COLORS.BOX_COLOR_LIGHT} handleClick= {signOutUser} content={"ODHLÁSIT SE"}/> }
   </div>
   {button && <button className='hamburger' onClick={handleToggleMenu}>{showMenu ? <X size={32}/> : <Menu size={32}/>}</button>}
  

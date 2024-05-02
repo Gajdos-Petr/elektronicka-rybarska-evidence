@@ -1,27 +1,48 @@
-import React from 'react'
+import React,{useContext, useState, useEffect} from 'react'
 import UserInfoBar from '../components/userDashboard/UserInfoBar'
-import '../styles/MemberDashboard.css'
+import '../assets/styles/MemberDashboard.css'
 import SectionTittle from '../components/SectionTittle'
 import UserTopMenu from '../components/userDashboard/UserTopMenu'
-import { COLORS } from '../styles/colors';
+import { COLORS } from '../assets/colors/colors';
+import { UserContext } from '../App'
+
+
 
 function MemberDashboard() {
+  const [user, setUser] = useContext(UserContext)
+
+    const[isAdmin, setIsAdmin] = useState();
+    const [loadedUser, setLoadedUser] = useState([]);
 
 
-  return (
-    <section className='dashboard-section'>
-   <SectionTittle tittle={"Uživatelská"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
+    useEffect(() => {
+      fetch(`http://localhost:8000/members/${user}`)
+        .then(res => res.json())
+        .then((data) => {
+          setLoadedUser(data);
+          data.role === 'admin' ? setIsAdmin(1) : setIsAdmin(0)
+
+        })
+        .catch((error) => {
+          console.error('Chyba při načítání informací o členu:', error);
+        });
+    }, [user]);
+
+    return (
+  <section className='dashboard-section'>
+  <SectionTittle tittle={"Uživatelská správa"} backgroundColor = {COLORS.BACKGROUND_COLOR} textDecorationColor={COLORS.BOX_COLOR_LIGHT} color = {COLORS.TEXT_COLOR_BLACK}/>
     <div className="container-section member-deshboard-container">
       <div className='conainer-data left'>
-      <UserInfoBar/>
+
+      {loadedUser && <UserInfoBar user={loadedUser}/>}
       </div>
       <div className='container-action'>
-      <UserTopMenu/>
+   <UserTopMenu admin={isAdmin}/>
       </div>
     </div>
     </section>
 
   )
-}
+} 
 
 export default MemberDashboard
