@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect, useContext} from 'react'
 import GROUNDS_DATA from '../../data/reviry.json'
 import MEMBERS_DATA from '../../data/clenove.json'
 import  COLUMNS_MEMBERS  from '../../data/columns/columnsMembers'
@@ -8,13 +8,16 @@ import SimpleTable from '../table/SimpleTable'
 import SimpleButton from '../buttons/SimpleButton'
 import { COLORS } from '../../assets/colors/colors';
 import { useNavigate  } from "react-router-dom";
+import {EditItemContext} from '../../App'
 
-function UserTopMenu({admin}) {
+function UserTopMenu({admin, canDoVisit}) {
     const [selectedTable, setSelectedTable] = useState("grounds");
     const[currentAddress, setCurrentAddress] = useState('http://localhost:8000/grounds');
     const [filterTrigger, setFilterTrigger] = useState(1); 
     const [columns, setColumns] = useState(COLUMNS_GROUNDS);
     const [selectedData, setSelectedData] = useState();
+    const [itemEdit, setItemEdit] = useContext(EditItemContext);
+
     useEffect(() => {
       if (filterTrigger > 0) { 
         fetch(currentAddress)
@@ -60,13 +63,13 @@ function UserTopMenu({admin}) {
     <div className='container-action-header'>
   {admin ? 
   <div className='container-actions'>
-  <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"VYTVOŘIT DOCHÁZKU"}  handleClick={() => goEditablePage("visit")}/>
-    <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"PŘIDAT REVÍR"} handleClick={() => goEditablePage("ground")}/>
-    <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"PŘIDAT ČLENA"} handleClick={() => goEditablePage("member")}/>
+ {canDoVisit ?  <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"VYTVOŘIT DOCHÁZKU"}  handleClick={() => {setItemEdit(null); goEditablePage("visit")}}/> : undefined}
+    <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"PŘIDAT REVÍR"} handleClick={() => {setItemEdit(null);goEditablePage("ground")}}/>
+    <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"PŘIDAT ČLENA"} handleClick={() => {setItemEdit(null);goEditablePage("member")}}/>
 </div>
 :
 <div className='container-actions'>
-<SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"VYTVOŘIT DOCHÁZKU"}  handleClick={() => goEditablePage("visit")}/>
+{canDoVisit ?  <SimpleButton background={COLORS.BOX_COLOR_LIGHT}  content={"VYTVOŘIT DOCHÁZKU"}  handleClick={() => {setItemEdit(null); goEditablePage("visit")}}/> : undefined}
 </div>
 }
 <h3>Zobrazená data:</h3>

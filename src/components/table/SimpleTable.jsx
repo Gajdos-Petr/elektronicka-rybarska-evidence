@@ -1,8 +1,10 @@
-import React,{useState, useMemo}  from 'react';
+import React,{useState, useMemo,  useContext}  from 'react';
 import { useTable, useFilters, usePagination } from 'react-table';
 import { useNavigate, useLocation  } from "react-router-dom";
 import { Pencil, Trash2  } from 'lucide-react';
 import '../../assets/styles/table.css'
+import {EditItemContext} from '../../App'
+
 function GroundsTable({columns, inputData, currentDataType, admin}) {
   const navigate = useNavigate();
     const [filterInput, setFilterInput] = useState("");
@@ -12,6 +14,9 @@ function GroundsTable({columns, inputData, currentDataType, admin}) {
     const[modifyUrl, setModifyUrl] = useState('');
 
     let deleteMember = false;
+    const [itemEdit, setItemEdit] = useContext(EditItemContext);
+
+
     //filtrovani reviru podle podle cisla reviru 
     const handleFilterChange = e => {
         const value = e.target.value || undefined;
@@ -39,7 +44,22 @@ function GroundsTable({columns, inputData, currentDataType, admin}) {
     };
     
       const handleEditItem = (id) =>{
-      navigate(`/zaznam/ground/${id}`); 
+        switch(currentDataType){
+          case "members":
+            setItemEdit(id)
+            navigate(`/zaznam/member`); 
+            deleteMember = true;
+          break;
+          case "grounds":
+            setItemEdit(id)
+            navigate(`/zaznam/ground`); 
+            break;
+            case "visits":
+            setItemEdit(id)
+              navigate(`/zaznam/visit`); 
+              break;
+        }
+     
       }
 
       const  handleDeleteItem = async(id) =>{
@@ -135,7 +155,7 @@ function GroundsTable({columns, inputData, currentDataType, admin}) {
                             }
             {
             location === 0 || admin ?                <td data-label= "Akce">
-            <button className='action-button' onClick={(e) => { e.stopPropagation(); handleEditItem(row.original.id) }}><Pencil /></button>
+            <button className='action-button'  onClick={(e) => { e.stopPropagation(); handleEditItem(row.original) }}><Pencil /></button>
             <button className='action-button' onClick={(e) => { e.stopPropagation(); handleDeleteItem(row.original.id) }}><Trash2 /></button>
           </td> : null
 

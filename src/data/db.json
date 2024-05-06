@@ -6,9 +6,21 @@
       "fName": "Petr",
       "lName": "Gajdoš",
       "date": "2001-04-02",
-      "adress": "Nazaret 1754 Čáslav, 28601 Čáslav",
+      "adress": "nám. Čs. legií 565, 530 02 Pardubice I",
       "organization": "MO Malešov",
       "stamp": "Zaplacena",
+      "jobs": "Splněny/Uhrazeny",
+      "permit": "Místní"
+    },
+    {
+      "id": "2",
+      "role": "admin",
+      "fName": "Petr",
+      "lName": "Gajdoš",
+      "date": "2001-04-02",
+      "adress": "nám. Čs. legií 565, 530 02 Pardubice I",
+      "organization": "MO Malešov",
+      "stamp": "Nezaplacena",
       "jobs": "Splněny/Uhrazeny",
       "permit": "Místní"
     }
@@ -28,15 +40,6 @@
     }
   ],
   "grounds": [
-    {
-      "id": "1",
-      "number": 411035,
-      "name": "KLEJNARKA 2",
-      "type": "Mimopstruhový",
-      "organization": "MO Čáslav",
-      "size": 0.8,
-      "desc": "Přítok Labe. Od jezu u náhonu na rybník Vrabcov v k. ú. Třebešice až k jezu v obci Krchleby nad rybníkem Netušil.; Součástí revíru je: rybník Pecina v k. ú. Hološiny 0,8 ha; rybník Shoř v k. ú. Hološiny a v k. ú. Opatovice u Zbýšova 3,2 ha"
-    },
     {
       "id": "2",
       "number": 411167,
@@ -185,6 +188,10 @@
   "logins": [
     {
       "id": "1",
+      "password": "heslo"
+    },
+    {
+      "id": "2",
       "password": "heslo"
     }
   ]

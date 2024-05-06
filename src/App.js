@@ -11,12 +11,15 @@ import { Route, Routes } from 'react-router-dom';
 import FishingRules from './pages/FishingRules';
 import PrivateRoute from './components/PrivateRoute';
 export const UserContext = createContext();
+export const EditItemContext = createContext();
 
 function App() {
   const [user, setUser] = useState("");
+  const [itemToEdit, setItemToEdit] = useState();
   return (
     <>
     <UserContext.Provider value={[user, setUser]}>
+    <EditItemContext.Provider value={[itemToEdit, setItemToEdit]}>
     <Header />      
         
         <Routes>
@@ -27,9 +30,9 @@ function App() {
          <Route path='/revir/:number' element={<GroundInfo/>} /> {/*Dynamicka cesta: pro informace o konkrétním revíru*/}
          <Route path='/dashboard' element={<PrivateRoute pageToReturn= "dashboard" />}/> {/*Cesta na: stránka přehled uživatele*/}
          <Route path='/zaznam/:type' element={<PrivateRoute pageToReturn="zaznam" />}/> {/*Cesta na: stránka přehled uživatele*/}
-         <Route path='/zaznam/:type:number' element={<PrivateRoute pageToReturn="zaznam" />}/> {/*Cesta na: stránka přehled uživatele*/}
          <Route path="*" element={<Page404 />} /> {/*Chybová stránka 404*/}
        </Routes>
+       </EditItemContext.Provider>
        </UserContext.Provider>
 
        <Footer />
